@@ -53,27 +53,27 @@ const validator = document.querySelector("form")
 // console.log(emailUser);
 const emailList = ['srocco@gmail.com', 'maria2@gmail.com', 'giovanni3@gmail.com', 'carlo7@gmail.com']
 
-
-
 validator.addEventListener("click", function (e) {
-
     e.preventDefault();
 
     let founded = false;
+   
 
     for (let i = 0; i < emailList.length; i++) {
         const emailItem = emailList[i];
-      
         if (emailItem === emailUser.value) {
             founded = true;
-        } 
-           
+        }
     }
-   
-    if (founded ){
-        console.log('sei dentro la lista');
-    } else 
-    console.log('sei fuori dalla lista');
+
+    if (founded) {
+        // console.log('sei dentro la lista');
+        let dentro = document.getElementById("resultTrue").innerHTML = 'Sei dentro'
+    } else {
+        // console.log('sei fuori dalla lista');
+        let dentro  = document.getElementById ('resultTrue').innerHTML = 'Sei fuori'
+    }
+
 });
 
 
