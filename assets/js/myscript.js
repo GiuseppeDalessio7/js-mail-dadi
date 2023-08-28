@@ -11,23 +11,32 @@ console.log('Numero giocatore ' + randomPlayers);
 let randomPc = Math.floor(Math.random() * 6 ) + 1;
 console.log('Numero pc ' + randomPc);
 
+let win 
+
 
 if (randomPlayers > randomPc ){
     // alert('Ha vinto il giocatore');
     console.log('Ha vinto il giocatore');
+    let win = ('Il giocatore')
+    let winner = document.getElementById('winner').innerHTML = ('Il vincitore è: ' + win)  
+
     
 
 }if (randomPlayers < randomPc) {
     // alert('Ha vinto il pc');
     console.log('Ha vinto il pc');
+    let win = ('Il Pc')
+    let winner = document.getElementById('winner').innerHTML = ('Il vincitore è: ' + win)  
+
 
 }else if (randomPlayers === randomPc){ 
     // alert('Pareggio');
     console.log('Pareggio');
+    let win = ('Vi è stato')
+    let winner = document.getElementById('winner').innerHTML = ('Il vincitore è: ' + win)  
+
 }
     
-
-
 let player = document.getElementById('player').innerHTML = ('Il numero del giocatore è: ' + randomPlayers)
 let pc = document.getElementById('pc').innerHTML = ('Il numero del pc è: ' + randomPc)
-// let winner = document.getElementById('winner').innerHTML ('Il vincitore è:' + )
+
