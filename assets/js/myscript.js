@@ -48,26 +48,26 @@ Chiedi all'utente la sua email,
 controlla che sia nella lista di chi può accedere, 
 stampa un messaggio appropriato sull’esito del controllo.*/
 
-const emailUser = document.getElementById('email').value;
-const validator = document.querySelector("button")
+const emailUser = document.getElementById('email');
+const validator = document.querySelector("form")
 // console.log(emailUser);
 const emailList = ['srocco@gmail.com', 'maria2@gmail.com', 'giovanni3@gmail.com', 'carlo7@gmail.com']
-
 
 
 for (let i = 0; i < emailList.length; i++) {
     const check = emailList[i];
     console.log(check);
-
-    validator.addEventListener('click', function (e) {
+     validator.addEventListener("click", function (e) {
         e.preventDefault();
-
+        const email = emailUser.value
         if (check === emailList) {
             console.log('sei dentro la lista');
         } else {
             console.log('sei fuori dalla lista');
-        }
-    });
-
+            }
+     });
 
 }
+
+
+
