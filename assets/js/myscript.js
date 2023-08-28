@@ -54,20 +54,26 @@ const validator = document.querySelector("form")
 const emailList = ['srocco@gmail.com', 'maria2@gmail.com', 'giovanni3@gmail.com', 'carlo7@gmail.com']
 
 
-for (let i = 0; i < emailList.length; i++) {
-    const check = emailList[i];
-    console.log(check);
-     validator.addEventListener("click", function (e) {
-        e.preventDefault();
-        const email = emailUser.value
-        if (check === emailList) {
-            console.log('sei dentro la lista');
-        } else {
-            console.log('sei fuori dalla lista');
-            }
-     });
 
-}
+validator.addEventListener("click", function (e) {
 
+    e.preventDefault();
+
+    let founded = false;
+
+    for (let i = 0; i < emailList.length; i++) {
+        const emailItem = emailList[i];
+      
+        if (emailItem === emailUser.value) {
+            founded = true;
+        } 
+           
+    }
+   
+    if (founded ){
+        console.log('sei dentro la lista');
+    } else 
+    console.log('sei fuori dalla lista');
+});
 
 
